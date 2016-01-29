@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var redPill: UIImageView!
+    
+    @IBOutlet var bluePill: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,6 +22,24 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func redPillButton(sender: AnyObject) {
+     
+        redPill.hidden = false
+        bluePill.hidden = true
+        
+    }
+    
+    @IBAction func bluePillButton(sender: AnyObject) {
+     
+        redPill.hidden = true
+        bluePill.hidden = false
+        
+        
+    }
+    
+   
+    
 
 
 }
